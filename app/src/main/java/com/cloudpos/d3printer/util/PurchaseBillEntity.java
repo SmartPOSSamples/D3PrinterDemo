@@ -36,7 +36,7 @@ public class PurchaseBillEntity implements Serializable {
 
     private String refNo;
 
-    private String amout;
+    private String amount;
 
     private String tips;// optional
 
@@ -59,7 +59,7 @@ public class PurchaseBillEntity implements Serializable {
                 || StringUtility.isEmpty(batchNo)
                 || StringUtility.isEmpty(voucherNo)
                 || StringUtility.isEmpty(dataTime)
-                || StringUtility.isEmpty(refNo) || StringUtility.isEmpty(amout)) {
+                || StringUtility.isEmpty(refNo) || StringUtility.isEmpty(amount)) {
             return false;
         } else
             return true;
@@ -177,12 +177,12 @@ public class PurchaseBillEntity implements Serializable {
         this.refNo = refNo;
     }
 
-    public String getAmout() {
-        return amout;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setAmout(String amout) {
-        this.amout = amout;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
     public String getTips() {
