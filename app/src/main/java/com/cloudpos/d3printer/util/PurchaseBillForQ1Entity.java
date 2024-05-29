@@ -70,7 +70,7 @@ public class PurchaseBillForQ1Entity implements Serializable {
 
 //	private String authNo;						//authNo
 
-    private String amout;                            //amount
+    private String amount;                            //amount
 
     private String reference;                    //reference
 
@@ -84,7 +84,7 @@ public class PurchaseBillForQ1Entity implements Serializable {
                 || StringUtility.isEmpty(dataTimeAndExpDate)
                 || StringUtility.isEmpty(refNoAndBatchNo)
                 || StringUtility.isEmpty(voucherAndAuthNo)
-                || StringUtility.isEmpty(amout)) {
+                || StringUtility.isEmpty(amount)) {
             return false;
         } else
             return true;
@@ -142,12 +142,12 @@ public class PurchaseBillForQ1Entity implements Serializable {
         this.terminalNoAndOperator = terminalNoAndOperator;
     }
 
-    public String getAmout() {
-        return amout;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setAmout(String amout) {
-        this.amout = amout;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
     public String getReference() {
