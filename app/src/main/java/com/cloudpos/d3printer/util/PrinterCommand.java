@@ -27,7 +27,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support。
+     * Not supported.
      */
     static public byte[] getCmdSetSmallFont_CN() {
         return new byte[]{
@@ -82,7 +82,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      */
     static public byte[] getCmdCancelSmallFont_CN() {
         return new byte[]{
@@ -91,7 +91,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support。
+     * Not supported.
      */
     static public byte[] getCmdSetSmallFont_EN() {
         return new byte[]{
@@ -100,7 +100,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      */
     static public byte[] getCmdCancelSmallFont_EN() {
         return new byte[]{
@@ -109,7 +109,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support
+     * Not supported.
      *
      * @param n :0,1
      * @return
@@ -157,7 +157,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support
+     * Not supported.
      *
      * @param nL
      * @param nH
@@ -312,7 +312,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      * @return
@@ -325,7 +325,7 @@ public class PrinterCommand {
 
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      * @return
@@ -366,7 +366,7 @@ public class PrinterCommand {
 
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      * @return
@@ -390,7 +390,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      * @return
@@ -402,7 +402,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support。
+     * Not supported.
      *
      * @param n
      * @return
@@ -414,7 +414,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      * @return
@@ -435,7 +435,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      */
     static public byte[] getCmdCutPaper() {
         return new byte[]{
@@ -455,7 +455,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      */
     static public byte[] getCmdBoldFontSmall() {
         return new byte[]{
@@ -464,7 +464,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      */
     static public byte[] getCmdBoldFontMedium() {
         return new byte[]{
@@ -497,7 +497,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param n
      */
@@ -647,7 +647,7 @@ public class PrinterCommand {
     }
 
     /**
-     * Not support.
+     * Not supported.
      *
      * @param
      * @return
