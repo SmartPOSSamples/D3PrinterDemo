@@ -180,10 +180,10 @@ public class MainActivity extends AppCompatActivity {
         device.printText(purchaseBill.getRefNoAndBatchNo());
         device.printText(PrintTagForQ1.PurchaseBillTag.VOUCHER_NO_AUTH_NO_TAG);
         device.printText(purchaseBill.getVoucherAndAuthNo());
-        device.printText(PrintTagForQ1.PurchaseBillTag.AMOUT_TAG + "\n");
+        device.printText(PrintTagForQ1.PurchaseBillTag.AMOUNT_TAG + "\n");
         format.clear();
         format.setParameter("size", "MEDIUM");
-        device.printText(format, purchaseBill.getAmout());
+        device.printText(format, purchaseBill.getAmount());
         format.clear();
         format.setParameter("size", "small");
         device.printText(format, PrintTagForQ1.PurchaseBillTag.SEPARATE + "\n");
@@ -199,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
         format.clear();
         format.setParameter("size", "small");
         device.printText(format, PrintTagForQ1.PurchaseBillTag.SEPARATE + "\n");
-        device.printText(PrintTagForQ1.PurchaseBillTag.C_AGREE_TRADE_TAG + "\n");
         device.printText(PrintTagForQ1.PurchaseBillTag.E_AGREE_TRADE_TAG + "\n");
         device.sendESCCommand(PrinterCommand.getCmdEscDN(2));
     }
@@ -214,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
         purchaseBill.setDataTimeAndExpDate("2005/01/21 16:52:32        2099/12\n");
         purchaseBill.setRefNoAndBatchNo("165232857468        000001\n");
         purchaseBill.setVoucherAndAuthNo("000042\n");
-        purchaseBill.setAmout("RMB:0.01\n");
+        purchaseBill.setAmount("RMB:0.01\n");
         purchaseBill.setReference("SCN:01" + ",UMPR NUM:4F682D56" + ",TC:EF789E918A548668" + ",TUR:008004E000" + ",AID:A000000333010101" + ",TSI:F800    ATC:0440" + ",APPLAB:PBOC  DEBIT" + ",APPNAME:PBOC  DEBIT" + ",AIP:7C00    CUMR:020300" + ",IAD:07010103602002010A01000000000005DD79CB" + ",TermCap:EOE1C8");
     }
 
