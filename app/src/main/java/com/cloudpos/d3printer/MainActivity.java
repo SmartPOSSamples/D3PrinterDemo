@@ -75,12 +75,12 @@ public class MainActivity extends AppCompatActivity {
             }
             device.printText(device.getDefaultParameters(), " -------------------------------------------------------" +
                     "In the spring of 2012, a group of payment industry veterans from payment, mobile communication,\n" +
-                    "and security industries got together. Thier expertise and accomplishments in the past 20+ years are\n\n\n\n\n\n");
+                    "and security industries got together. Their expertise and accomplishments in the past 20+ years are\n\n\n\n\n\n");
             device.printText("\n");
             device.printText("\n");
             device.printText("\n");
-            device.printText(" In the spring of 2012, a group of payment industry veterans from payment, mobile communication,\n" +
-                    "and security industries got together. Thier expertise and accomplishments in the past 20+ years are。++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\n\n\n\n");
+            device.printText("In the spring of 2012, a group of payment industry veterans from payment, mobile communication,\n" +
+                    "and security industries got together. Their expertise and accomplishments in the past 20+ years are。++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\n\n\n\n");
             device.printText("\n");
             device.printText("\n");
             device.printText("\n");
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (DeviceException e) {
             Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
-            Logger.d("code is not support");
+            Logger.d("code is not supported");
         }
     }
 
@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
             }
             device.close();
             device = null;
-            Toast.makeText(MainActivity.this, "already close printer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "printer already closed", Toast.LENGTH_SHORT).show();
         } catch (DeviceException e) {
             Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
@@ -302,9 +302,9 @@ public class MainActivity extends AppCompatActivity {
             case 5:
                 return "5: Open the cover";
             case 6:
-                return "6: offline";
+                return "6: Offline";
             case 7:
-                return "7: feeding";
+                return "7: Feeding";
             case 8:
                 return "8: Mechanical error";
             case 9:
@@ -347,37 +347,37 @@ public class MainActivity extends AppCompatActivity {
                     "<h3>It has some limitations, but it's a start.</h3>\n" +
                     "<h3>alipay.png</h3>\n" +
                     "<!--<img src=\"file:///android_asset/alipay.png\" width=\"360px\">-->\n" +
-                    "The love story\n" +
-                    "Aways I love you\n" +
-                    "Aways I miss you\n" +
-                    "Aways I in the story with you\n" +
-                    "Because I love\n" +
-                    "Because I want to\n" +
-                    "I want to with you get the marry\n" +
-                    "When I see you to cry\n" +
-                    "When I see you to smile\n" +
-                    "The smile is very lovely\n" +
+                    "Lorem ipsum dolor sit amet,\n" +
+                    "ea nec esse case fabulas.\n" +
+                    "n sit ullum elaboraret.\n" +
+                    "Aeque salutatus suscipiantur nec an.\n" +
+                    "Ut sit unum scribentur,\n" +
+                    "ut per habeo legendos.\n" +
+                    "Case tibique quo et.\n" +
+                    "Ea duo adhuc zril blandit,\n" +
+                    "eam ei dolore impetus vidisse,\n" +
+                    "at nec dignissim intellegat.\n" +
                     "<h3>onecodepic.png</h3>\n" +
                     "<!--<img src=\"file:///android_asset/onecodepic.png\" width=\"360px\">-->\n" +
-                    "I can to love you\n" +
-                    "When you say love to me\n" +
-                    "In the sky the star to light\n" +
-                    "I will to go with you in my heart only you\n" +
-                    "Only for you in my heart forever\n" +
-                    "You can to say\n" +
-                    "You are my prince always on my mind\n" +
+                    "Id ignota feugait duo,\n" +
+                    "id vis labores insolens singulis,\n" +
+                    "sed officiis voluptatum et.\n" +
+                    "Mel nobis moderatius et.\n" +
+                    "Ea prompta partiendo eam,\n" +
+                    "quando tamquam volumus ne nam.\n" +
+                    "At etiam theophrastus vim,\n" +
                     "<h3>triangle_center.bmp</h3>\n" +
                     "<!--<img src=\"file:///android_asset/triangle_center.bmp\" width=\"360px\">-->\n" +
-                    "I'm impossible is yours loved prince\n" +
-                    "Maybe you not know yet\n" +
-                    "Since you say you are love me\n" +
-                    "Deep in my heart's sky become brighten\n" +
-                    "I hope (want) to be the angel\n" +
-                    "That you loved in fairy tale\n" +
-                    "Widen my hands become the wings protect you\n" +
-                    "You will trust me\n" +
-                    "Trust that we're like the fairy tales couple\n" +
-                    "Eternal love is our end\n" +
+                    "pertinacia vituperatoribus usu eu.\n" +
+                    "Dicta verterem per ei,\n" +
+                    "ne eam quodsi noluisse honestatis.\n" +
+                    "Vel dico reque consequat an.\n" +
+                    "In nam libris blandit complectitur,\n" +
+                    "electram accusamus vix ut.\n" +
+                    "Alii argumentum quaerendum qui ea,\n" +
+                    "vim nobis invenire torquatos ex,\n" +
+                    "wisi eruditi invenire an eum.\n" +
+                    "Ad cum homero admodum.\n" +
                     "</body>\n" +
                     "</html>", new PrinterHtmlListener() {
                 @Override
