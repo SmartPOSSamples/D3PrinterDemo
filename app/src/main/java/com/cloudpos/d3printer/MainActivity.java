@@ -2,7 +2,6 @@ package com.cloudpos.d3printer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,7 +17,8 @@ import com.cloudpos.cashdrawer.CashDrawerDevice;
 import com.cloudpos.d3printerdemo.R;
 import com.cloudpos.printer.Format;
 import com.cloudpos.printer.PrinterDevice;
-import com.cloudpos.sdk.printer.html.PrinterHtmlListener;
+import com.cloudpos.printer.PrinterHtmlListener;
+//import com.cloudpos.sdk.printer.html.PrinterHtmlListener;
 import com.orhanobut.logger.Logger;
 import com.cloudpos.d3printer.util.PrintTagForQ1;
 import com.cloudpos.d3printer.util.PrinterCommand;
@@ -97,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "please open printer", Toast.LENGTH_SHORT).show();
                 return;
             }
-            Bitmap bitmap = BitmapFactory.decodeStream(mContext.getResources().getAssets().open("weixinxxxx.png"));
+//            PrintHelper photoPrinter = new PrintHelper((Context) device);
+//            photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
+
+            Bitmap bitmap = BitmapFactory.decodeStream(mContext.getResources().getAssets().open("wizarpos_qrcode_small.png"));
             device.printBitmap(bitmap);
             bitmap.recycle();
             device.printText("\n");
@@ -123,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             printBillForQ1(purchaseBill);
             Bitmap bitmap = null;
             try {
-                bitmap = BitmapFactory.decodeStream(mContext.getResources().getAssets().open("weixinxxxx.png"));
+                bitmap = BitmapFactory.decodeStream(mContext.getResources().getAssets().open("wizarpos_qrcode_small.png"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -344,9 +347,9 @@ public class MainActivity extends AppCompatActivity {
                     "    *{margin : 0px; padding : 0px; width : 576px;}\n" +
                     "</style>\n" +
                     "<h3>It has some limitations, but it's a start.</h3>\n" +
-                    "<h3>alipay.png</h3>\n" +
-                    "<!--<img src=\"file:///android_asset/alipay.png\" width=\"360px\">-->\n" +
-                    "Lorem ipsum dolor sit amet,\n" +
+                    "<h3>android_robot.png</h3>\n" +
+                    "<img src=\"file:///android_asset/android_robot_black.png\" style=\"width:200px;height:auto;\"><br>\n" +
+                    "Lorem ipsum dolor sit amet, \n" +
                     "ea nec esse case fabulas.\n" +
                     "n sit ullum elaboraret.\n" +
                     "Aeque salutatus suscipiantur nec an.\n" +
@@ -356,8 +359,8 @@ public class MainActivity extends AppCompatActivity {
                     "Ea duo adhuc zril blandit,\n" +
                     "eam ei dolore impetus vidisse,\n" +
                     "at nec dignissim intellegat.\n" +
-                    "<h3>onecodepic.png</h3>\n" +
-                    "<!--<img src=\"file:///android_asset/onecodepic.png\" width=\"360px\">-->\n" +
+                    "<h3>wizarpos_logo.png</h3>\n" +
+                    "<img src=\"file:///android_asset/wizarpos_logo.png\"><br>\n" +
                     "Id ignota feugait duo,\n" +
                     "id vis labores insolens singulis,\n" +
                     "sed officiis voluptatum et.\n" +
@@ -365,8 +368,8 @@ public class MainActivity extends AppCompatActivity {
                     "Ea prompta partiendo eam,\n" +
                     "quando tamquam volumus ne nam.\n" +
                     "At etiam theophrastus vim,\n" +
-                    "<h3>triangle_center.bmp</h3>\n" +
-                    "<!--<img src=\"file:///android_asset/triangle_center.bmp\" width=\"360px\">-->\n" +
+                    "<h3>triangle.jpg</h3>\n" +
+                    "<img src=\"file:///android_asset/triangle.jpg\" style=\"width:200px;height:auto;\"><br>\n" +
                     "pertinacia vituperatoribus usu eu.\n" +
                     "Dicta verterem per ei,\n" +
                     "ne eam quodsi noluisse honestatis.\n" +
@@ -383,7 +386,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onGet(Bitmap bitmap, int i) {
 
                 }
-
                 @Override
                 public void onFinishPrinting(int i) {
                     Toast.makeText(MainActivity.this, "printer end", Toast.LENGTH_SHORT).show();
