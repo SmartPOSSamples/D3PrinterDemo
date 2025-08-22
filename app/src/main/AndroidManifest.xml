@@ -3,7 +3,7 @@
     package="com.cloudpos.d3printerdemo">
     <!--    android:sharedUserId="android.uid.system">-->
 
-    <uses-permission android:name="android.permission.CLOUDPOS_CASHBOX_ADAPTER" />
+    <uses-permission android:name="android.permission.CLOUDPOS_MONEYBOX"/>
     <uses-permission android:name="android.permission.CLOUDPOS_PRINTER_ADAPTER" />
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
