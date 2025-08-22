@@ -246,22 +246,23 @@ public class MainActivity extends AppCompatActivity {
             Logger.d("code is not supported");
         }
     }
-
+    CashDrawerDevice cashDrawerDevice = null;
     public void openCashbox(View view) {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final CashDrawerDevice device = (CashDrawerDevice) POSTerminal.getInstance(mContext).getDevice("cloudpos.device.cashdrawer");
+                cashDrawerDevice = (CashDrawerDevice)
+                        POSTerminal.getInstance(mContext).getDevice("com.cloudpos.device.cashdrawer");
                 try {
-                    device.open();
+                    cashDrawerDevice.open();
 
                     try {
-                        device.kickOut();
+                        cashDrawerDevice.openCashBox();
                     } catch (DeviceException e) {
                         e.printStackTrace();
                     }
                     try {
-                        device.close();
+                        cashDrawerDevice.close();
                     } catch (DeviceException e) {
                         e.printStackTrace();
                     }
@@ -271,6 +272,42 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }).start();
+    }
+
+    public void aueryCashboxStatus(View view){
+        if(cashDrawerDevice == null){
+            return;
+        }
+        try {
+            cashDrawerDevice.open();
+
+            try {
+                String status_str = "unknown";
+                int status = cashDrawerDevice.queryStatus();
+                if(status == 0){
+                    status_str = "opened";
+                }else if (status == 1){
+                    status_str = "closed";
+                }
+
+                String finalStatus_str = status_str;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MainActivity.this, "cash drawer status is "  + finalStatus_str, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            } catch (DeviceException e) {
+                e.printStackTrace();
+            }
+            try {
+                cashDrawerDevice.close();
+            } catch (DeviceException e) {
+                e.printStackTrace();
+            }
+        } catch (DeviceException e) {
+            e.printStackTrace();
+        }
     }
 
 
